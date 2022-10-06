@@ -1,0 +1,41 @@
+@charset "UTF-8";
+.task-list-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+  padding: 2px 2px 2px 40px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  background-color: rgba(104, 62, 50, 0.856);
+  border-radius: 3px;
+  animation-name: appear;
+  animation-duration: 0.3s;
+}
+@keyframes appear {
+  from {
+    transform: scale(60%);
+    filter: blur(2px);
+  }
+  to {
+    transform: scale(100%);
+  }
+}
+.task-list-line li {
+  width: 100%;
+}
+.task-list-line li::marker {
+  content: '▫  ';
+}
+.task-list-line .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  gap: 3px;
+}
+.task-list-line .button-container button {
+  width: 40px;
+} /*# sourceMappingURL=task-line-component.css.map */

@@ -1,0 +1,138 @@
+$box-s-small-size: 100px;
+
+$box-l-small-size: 150px;
+$box-small-size: 250px;
+$box-base-size: 400px;
+
+$background-color: rgb(170, 110, 94);
+$border-color: rgba(104, 62, 50, 0.681);
+$border-light-color: rgb(229, 228, 215);
+
+.animated {
+  position: absolute;
+  width: $box-l-small-size;
+  height: $box-l-small-size;
+  background-color: rgb(229, 228, 215);
+
+  &.box {
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+  }
+
+  //TODO SECTION
+  &.box_todo_1 {
+    top: 40px;
+    right: 0;
+  }
+  &.box_todo_3 {
+    right: 0;
+    bottom: 20px;
+
+    background-color: transparent;
+    border: 5px solid $border-color;
+  }
+
+  &.box_todo_2 {
+    bottom: 20px;
+    left: 0;
+  }
+
+  &.box_todo_4 {
+    bottom: 80px;
+    left: 120px;
+    background-color: transparent;
+    border: 5px solid $border-color;
+    animation-name: moveframeboxfour;
+    animation-duration: 5s;
+  }
+
+  @keyframes moveframeboxfour {
+    to {
+      bottom: 100px;
+      left: 150px;
+    }
+  }
+
+  &.box_todo_5 {
+    right: 200px;
+    bottom: 30px;
+    width: $box-s-small-size;
+    height: $box-s-small-size;
+    animation-name: move_todo_bottom;
+    animation-duration: 7s;
+  }
+
+  @keyframes move_todo_bottom {
+    to {
+      right: 100px;
+      bottom: 30px;
+    }
+  }
+
+  //LANDONG PAGE SECITION
+  &.box_1 {
+    width: $box-base-size;
+    height: $box-base-size;
+    top: 0;
+    right: 0;
+  }
+  &.box_3 {
+    right: 150px;
+    top: 150px;
+    width: $box-small-size;
+    height: $box-small-size;
+    background-color: transparent;
+    border: 5px solid $border-color;
+    animation-name: moveframebox;
+    animation-duration: 7s;
+  }
+
+  @keyframes moveframebox {
+    to {
+      right: 240px;
+      top: 240px;
+    }
+  }
+
+  &.box_2 {
+    bottom: 0;
+    left: 50px;
+    width: $box-small-size;
+    height: $box-small-size;
+  }
+
+  &.box_4 {
+    bottom: 80px;
+    left: 120px;
+    width: $box-small-size;
+    height: $box-small-size;
+    background-color: transparent;
+    border: 5px solid $border-color;
+    animation-name: moveframeboxfour;
+    animation-duration: 5s;
+  }
+
+  @keyframes moveframeboxfour {
+    to {
+      bottom: 100px;
+      left: 150px;
+    }
+  }
+
+  &.box_5 {
+    top: 200px;
+    left: 100px;
+    width: $box-s-small-size;
+    height: $box-s-small-size;
+    animation-name: moverightbox;
+    animation-duration: 8s;
+  }
+
+  @keyframes moverightbox {
+    to {
+      top: 200px;
+      left: 300px;
+    }
+  }
+}

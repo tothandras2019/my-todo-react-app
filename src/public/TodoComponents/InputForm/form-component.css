@@ -1,0 +1,34 @@
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  background-color: rgb(170, 110, 94);
+}
+.input-container .card {
+  align-items: center;
+}
+.input-container .card ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.input-container .card ul form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  gap: 10px;
+}
+.input-container .card ul form input[type=text] {
+  height: 50px;
+}
+.input-container .card ul form input[type=text]::placeholder {
+  font-size: larger;
+}
+.input-container .card ul form button {
+  height: 50px;
+  width: 130px;
+}/*# sourceMappingURL=form-component.css.map */

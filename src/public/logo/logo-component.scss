@@ -1,0 +1,19 @@
+$border-color: rgba(104, 62, 50, 0.681);
+
+.small {
+  display: flex;
+  width: fit-content;
+  align-items: flex-end;
+  h1 {
+    font-size: 40px;
+  }
+
+  .logo-box {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    margin: 3px;
+    border: 1px solid $border-color;
+    border-radius: none;
+  }
+}

@@ -1,0 +1,16 @@
+.small {
+  display: flex;
+  width: fit-content;
+  align-items: flex-end;
+}
+.small h1 {
+  font-size: 40px;
+}
+.small .logo-box {
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  margin: 3px;
+  border: 1px solid rgba(104, 62, 50, 0.681);
+  border-radius: none;
+}/*# sourceMappingURL=logo-component.css.map */

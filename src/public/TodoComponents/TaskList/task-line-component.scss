@@ -1,0 +1,52 @@
+$background-input: rgb(113, 139, 151);
+$background-todo: rgb(18, 32, 38);
+$background-task-item: rgb(25, 40, 68);
+$letter-color: rgb(223, 217, 217);
+
+$background-color: rgb(170, 110, 94);
+$border-color: rgba(104, 62, 50, 0.856);
+$border-light-color: rgb(229, 228, 215);
+
+.task-list-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+  padding: 2px 2px 2px 40px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  background-color: $border-color;
+  border-radius: 3px;
+  animation-name: appear;
+  animation-duration: 0.3s;
+
+  @keyframes appear {
+    from {
+      transform: scale(60%);
+      filter: blur(2px);
+    }
+    to {
+      transform: scale(100%);
+    }
+  }
+
+  li {
+    width: 100%;
+    &::marker {
+      content: '▶ ';
+    }
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    gap: 3px;
+    button {
+      width: 40px;
+    }
+  }
+}

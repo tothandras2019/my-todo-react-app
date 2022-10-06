@@ -1,0 +1,26 @@
+header {
+  width: 100%;
+  color: white;
+}
+header .header-descreption {
+  display: flex;
+  justify-content: space-between;
+  color: grey;
+}
+header .header-descreption h4 {
+  color: grey;
+}
+header .header-descreption p {
+  height: fit-content;
+  width: 30px;
+  padding: 0;
+  margin: 5px;
+  text-align: center;
+  border: 1px solid rgba(104, 62, 50, 0.681);
+  color: grey;
+}
+header .separator {
+  width: 100%;
+  height: 2px;
+  background-color: grey;
+}/*# sourceMappingURL=new-todo-list-component.css.map */

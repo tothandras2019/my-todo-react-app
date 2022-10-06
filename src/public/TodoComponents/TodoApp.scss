@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Montserrat:wght@500&display=swap');
+
+@keyframes start {
+  from {
+    transform: scale(0%);
+  }
+  to {
+    transform: scale(100%);
+  }
+}
+
+// #region RESET
+*,
+body,
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+//#endregion
+
+$background-input: rgb(113, 139, 151);
+$background-todo: rgb(18, 32, 38);
+$background-task-item: rgb(25, 40, 68);
+$letter-color: rgb(223, 217, 217);
+
+$background-color: rgb(170, 110, 94);
+$border-color: rgba(104, 62, 50, 0.856);
+$border-light-color: rgb(229, 228, 215);
+
+* {
+  color: $letter-color;
+}
+
+#root {
+  position: relative;
+  background-color: $background-color;
+  height: 100vh;
+  padding: 0;
+}
+
+button {
+  border: none;
+  background-color: $border-color;
+  text-decoration: none;
+  height: 40px;
+  padding: 5px;
+  &:active {
+    background-color: $background-input;
+  }
+}
+span {
+  position: relative;
+  width: 60%;
+
+  input {
+    font-size: larger;
+    height: 18px;
+    width: 90%;
+    border: none;
+    border-bottom-width: 100%;
+    border-bottom: 2px solid $border-color;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+      background-color: transparent;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: 'type task';
+    pointer-events: none;
+    top: 20px;
+    left: 0px;
+    color: $letter-color;
+    transition: 0.3s;
+  }
+}
+
+.move {
+  &::before {
+    top: -15px;
+    font-size: smaller;
+    transition: 0.2s;
+  }
+
+  &:focus {
+    overflow: visible;
+    outline: none;
+    background-color: transparent;
+  }
+}
+
+h2 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 50px;
+  margin: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  width: 80%;
+  animation-name: start;
+  animation-duration: 0.5s;
+}
+
+.todo-section {
+  transform: scale(0%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  .todo-center {
+    width: 50%;
+    height: 80%;
+    border: 5px solid $border-color;
+    border-bottom-width: 15px;
+    border-right-width: 15px;
+
+    .todo-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      height: 80%;
+      background-color: $letter-color;
+      .card {
+        min-height: 70%;
+        h2 {
+          color: $background-todo;
+        }
+
+        ul {
+          font-size: 30px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+.cross-title {
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+
+.hide {
+  transform: scale(0%);
+}
+
+.remove {
+  display: none;
+}
+
+.appear {
+  transition: 0.5s;
+  transform: scale(100%);
+}
