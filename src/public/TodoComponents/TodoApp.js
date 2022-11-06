@@ -43,15 +43,6 @@ export function TodoApp() {
     setRemovedList(removedList.filter((task, i) => id !== i))
   }
 
-  // function handleComplete(id) {
-  //   setTaskList(
-  //     taskList.map((task, i) => {
-  //       if (id === i) task.isValid = false
-  //       return task
-  //     }),
-  //   )
-  // }
-
   function handleComplete(id) {
     const task = taskList.find((task, i) => i === id)
 

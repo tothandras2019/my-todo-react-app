@@ -1,4 +1,4 @@
-export const AsideContainer = ({ className, title, component, children, logoComponent }) => {
+export const AsideContainer = ({ className, children, logoComponent }) => {
   return (
     <aside className={className}>
       <div className='card'>

@@ -6,7 +6,7 @@ export default function Tasklist(props) {
   return taskList.map((task, i) => (
     <div key={`task_container_${i}`} className={`task-list-line `}>
       <li key={i} className={`${task.isValid ? '' : 'cross-title'}`}>
-        {task.task}{' '}
+        {task.task}
       </li>
       <div className='button-container'>
         {deletTask ? (

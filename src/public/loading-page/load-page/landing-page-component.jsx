@@ -8,7 +8,7 @@ export const LoadingPage = ({ boxes }) => {
   const [hide, sethide] = useState(false)
   const [remove, setRemove] = useState(false)
   const { setStartAnim } = useContext(HiddenContext)
-  // ${remove ? 'remove' : ''}
+
   return (
     !remove && (
       <section
